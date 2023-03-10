@@ -32,7 +32,7 @@ export default function Buttons({ value, setValue }) {
 
   return (
     <div className="buttons-container">
-      <div className="item1">
+      <div className="box1">
         <div>
           <button className="button1 button " onClick={() => add(1)}>
             1
@@ -49,7 +49,7 @@ export default function Buttons({ value, setValue }) {
             3
           </button>
         </div>
-        <div className="item2">
+        <div>
           <button className="button4 button" onClick={() => add(4)}>
             4
           </button>
@@ -60,7 +60,7 @@ export default function Buttons({ value, setValue }) {
             6
           </button>
         </div>
-        <div className="item3">
+        <div>
           <button className="button7 button" onClick={() => add(7)}>
             7
           </button>
@@ -72,32 +72,38 @@ export default function Buttons({ value, setValue }) {
           </button>
         </div>
       </div>
-      <div className="item0">
-        <button className="button0 button" onClick={() => add(0)}>
-          0
-        </button>
-
-        <button className="buttonac" onClick={() => clear()}>
-          ac
-        </button>
-
-        <button className="buttonEquals" onClick={() => handleEquals(value)}>
-          =
-        </button>
-      </div>
-      <div>
-        <button className="buttonAdd" onClick={() => add("+")}>
-          +
-        </button>
-        <button className="buttonSubtract" onClick={() => add("-")}>
-          -
-        </button>
-        <button className="buttonMultiply" onClick={() => add("*")}>
-          *
-        </button>
-        <button className="buttonDivide" onClick={() => add("/")}>
-          /
-        </button>
+      <div className="box5">
+        <div className="operations box2">
+          <div>
+            <button className="buttonAdd" onClick={() => add("+")}>
+              +
+            </button>
+            <button className="buttonSubtract" onClick={() => add("-")}>
+              -
+            </button>
+          </div>
+          <div>
+            <button className="buttonMultiply" onClick={() => add("*")}>
+              *
+            </button>
+            <button className="buttonDivide" onClick={() => add("/")}>
+              /
+            </button>
+          </div>
+        </div>
+        <div className="box3">
+          <button className="buttonac" onClick={() => clear()}>
+            ac
+          </button>
+        </div>
+        <div className="box4">
+          <button className="button0 button" onClick={() => add(0)}>
+            0
+          </button>
+          <button className="buttonEquals" onClick={() => handleEquals(value)}>
+            =
+          </button>
+        </div>
       </div>
     </div>
   );
